@@ -1,0 +1,51 @@
+experiment:
+  id: "green-nav-ab-test"
+  name: "Green Navigation Bar A/B Test"
+  description: "Test the impact of changing the navigation bar color to green on user engagement and conversions"
+  platform: "convert.com"
+  
+  targeting:
+    urls: 
+      - ".*" # Applies to all pages, can be restricted as needed
+    device_targeting: "all"
+    audience: "all_visitors"
+    
+  variants:
+    control: 
+      name: "Original Navigation"
+      description: "Baseline navigation bar with original styling"
+      allocation: 50
+      
+    treatment:
+      name: "Green Navigation"
+      description: "Navigation bar with green background color"
+      allocation: 50
+      changes:
+        - element: "navigation bar"
+          modification: "background color changed to green (#22c55e)"
+          
+  metrics:
+    primary: 
+      - name: "conversion_rate"
+        description: "Overall conversion rate"
+        
+    secondary:
+      - name: "bounce_rate"
+        description: "Page bounce rate"
+      - name: "time_on_page"
+        description: "Average time spent on page"
+      - name: "navigation_clicks"
+        description: "Clicks on navigation elements"
+        
+  hypothesis: "Changing the navigation bar to green will improve brand perception and increase user engagement, leading to higher conversion rates"
+  
+  success_criteria:
+    - "Statistical significance of 95%"
+    - "Minimum sample size of 1000 visitors per variant"
+    - "Minimum 5% relative improvement in primary metric"
+    
+  duration:
+    estimated_days: 14
+    minimum_days: 7
+    
+  risk_assessment: "Low - Visual change only, no functional modifications"

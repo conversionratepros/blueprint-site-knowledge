@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Navigation A/B Test Demo</title>
+    <style>
+        /* Base styles for demo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+        }
+        
+        /* Original navigation styling (control) */
+        nav {
+            background-color: #1f2937;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #60a5fa;
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Main content */
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            background-color: #f59e0b;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #d97706;
+        }
+        
+        .content {
+            padding: 2rem 0;
+        }
+        
+        .content h2 {
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .content p {
+            margin-bottom: 1rem;
+            color: #6b7280;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #1f2937;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Your Brand</a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>A/B Test Demo</h1>
+            <p>Testing green navigation bar impact on user experience</p>
+            <a href="#" class="cta-button" onclick="trackConversion()">Get Started</a>
+        </section>
+
+        <section class="content">
+            <h2>About This Test</h2>
+            <p>This demo page shows how the green navigation bar A/B test would appear on a website. The JavaScript and CSS files will change the navigation background from the current dark gray to green.</p>
+            
+            <h2>Test Variants</h2>
+            <p><strong>Control:</strong> Original dark gray navigation bar (#1f2937)</p>
+            <p><strong>Treatment:</strong> Green navigation bar (#22c55e)</p>
+            
+            <h2>How to Test</h2>
+            <p>1. Load this page to see the control version</p>
+            <p>2. Run the variant.js file to see the treatment version</p>
+            <p>3. The JavaScript will automatically apply the green styling</p>
+            
+            <h2>Key Features</h2>
+            <p>✓ Responsive design maintained</p>
+            <p>✓ Accessibility preserved</p>
+            <p>✓ Cross-browser compatible</p>
+            <p>✓ Analytics tracking included</p>
+        </section>
+    </main>
+
+    <script>
+        // Demo functionality
+        function trackConversion() {
+            console.log('Conversion tracked!');
+            alert('Conversion tracked! In a real test, this would be sent to your analytics platform.');
+        }
+        
+        // Mobile menu toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Simulate Convert.com tracking
+        window._conv_q = window._conv_q || [];
+        window._conv_q.push = function(data) {
+            console.log('Convert.com event:', data);
+        };
+    </script>
+
+    <!-- 
+    To test the A/B test variant, include the files:
+    <link rel="stylesheet" href="variant.css">
+    <script src="variant.js"></script>
+    -->
+</body>
+</html>

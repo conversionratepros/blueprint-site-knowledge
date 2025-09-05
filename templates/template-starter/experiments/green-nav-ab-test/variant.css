@@ -1,0 +1,205 @@
+/* 
+ * Green Navigation Bar A/B Test - CSS Implementation
+ * Experiment ID: green-nav-ab-test
+ * Target: Navigation bar background color change to green
+ * Platform: Convert.com
+ */
+
+/* Primary navigation selectors with high specificity */
+body nav,
+body header nav,
+body .navbar,
+body .navigation,
+body .nav-container,
+body #navigation,
+body #navbar,
+body #main-nav,
+body .main-navigation,
+body .primary-navigation,
+body .site-navigation,
+body [role="navigation"] {
+    background-color: #22c55e !important;
+    background-image: none !important; /* Remove any background images */
+}
+
+/* Additional common navigation patterns */
+body .nav-header,
+body .navbar-header,
+body .header-nav,
+body .top-nav,
+body .main-nav,
+body .primary-nav {
+    background-color: #22c55e !important;
+    background-image: none !important;
+}
+
+/* Framework-specific selectors */
+/* Bootstrap navigation */
+body .navbar-default,
+body .navbar-light,
+body .navbar-dark,
+body .bg-primary,
+body .bg-dark,
+body .bg-light {
+    background-color: #22c55e !important;
+}
+
+/* Tailwind CSS navigation */
+body .bg-blue-500,
+body .bg-blue-600,
+body .bg-gray-800,
+body .bg-gray-900,
+body .bg-white {
+    background-color: #22c55e !important;
+}
+
+/* Foundation framework */
+body .top-bar,
+body .menu-bar {
+    background-color: #22c55e !important;
+}
+
+/* Material UI / Material Design */
+body .mdc-top-app-bar,
+body .mat-toolbar,
+body .v-toolbar {
+    background-color: #22c55e !important;
+}
+
+/* Ensure text readability on green background */
+body nav *,
+body header nav *,
+body .navbar *,
+body .navigation *,
+body [role="navigation"] * {
+    color: white !important;
+}
+
+/* Specific text elements in navigation */
+body nav a,
+body nav span,
+body nav p,
+body nav div,
+body header nav a,
+body header nav span,
+body header nav p,
+body header nav div,
+body .navbar a,
+body .navbar span,
+body .navbar p,
+body .navbar div,
+body .navigation a,
+body .navigation span,
+body .navigation p,
+body .navigation div {
+    color: white !important;
+    text-shadow: none !important;
+}
+
+/* Navigation links hover states */
+body nav a:hover,
+body header nav a:hover,
+body .navbar a:hover,
+body .navigation a:hover,
+body [role="navigation"] a:hover {
+    color: #f0f9ff !important; /* Light blue hover state */
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Navigation button elements */
+body nav button,
+body header nav button,
+body .navbar button,
+body .navigation button,
+body [role="navigation"] button {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body nav button:hover,
+body header nav button:hover,
+body .navbar button:hover,
+body .navigation button:hover,
+body [role="navigation"] button:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Mobile menu toggler */
+body .navbar-toggler,
+body .menu-toggle,
+body .mobile-menu-toggle,
+body .hamburger {
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Dropdown menus */
+body nav .dropdown-menu,
+body header nav .dropdown-menu,
+body .navbar .dropdown-menu,
+body .navigation .dropdown-menu {
+    background-color: #22c55e !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body nav .dropdown-item,
+body header nav .dropdown-item,
+body .navbar .dropdown-item,
+body .navigation .dropdown-item {
+    color: white !important;
+}
+
+body nav .dropdown-item:hover,
+body header nav .dropdown-item:hover,
+body .navbar .dropdown-item:hover,
+body .navigation .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+/* Search box in navigation */
+body nav input[type="search"],
+body nav input[type="text"],
+body header nav input[type="search"],
+body header nav input[type="text"],
+body .navbar input[type="search"],
+body .navbar input[type="text"],
+body .navigation input[type="search"],
+body .navigation input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #333 !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Logo adjustments if needed */
+body nav .logo,
+body nav .brand,
+body header nav .logo,
+body header nav .brand,
+body .navbar .logo,
+body .navbar .brand,
+body .navbar-brand {
+    /* Maintain original logo styling */
+    background-color: transparent !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Mobile navigation specific styles */
+    body .mobile-nav,
+    body .navbar-collapse,
+    body .nav-mobile {
+        background-color: #22c55e !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small mobile adjustments */
+    body nav,
+    body header nav,
+    body .navbar,
+    body .navigation {
+        background-color: #22c55e !important;
+    }
+}
